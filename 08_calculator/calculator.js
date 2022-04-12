@@ -23,12 +23,25 @@ const multiply = function(...digits) {
   return product;
 };
 
-const power = function() {
-	
+const power = function(num1 , num2) {
+	return num1 ** num2;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  
+  if (num == 0) {
+    return 1;
+  }
+
+  const arr = [];
+	for (let i = 1 ; i <= num ; i++) {
+    arr.push(i);
+  }
+
+  let total = arr.reduce((result, number) => {
+    return result * number;
+  }, 1);
+  return total;
 };
 
 // Do not edit below this line
